@@ -1,0 +1,186 @@
+/* 圖片設置 */
+.logo_img{
+    width: 220px;
+    height: 160px; 
+}
+.intro img {
+    width: 150px;
+    height: 150px; 
+}
+
+.card img {
+    width: 140px; /* 調整寬度 */
+    height: 250px; /* 調整高度 */
+}
+.pirate-flag-container {
+  text-align: center;
+  margin-bottom: 20px; /* 調整海賊旗區塊的底部間距 */
+}
+.pirate-flag {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 10px; /* 調整海賊旗的底部間距 */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+}
+
+nav {
+  text-align: center;
+  margin-bottom: 20px;
+}
+/* 菜單欄 */
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #000;
+  position: relative; /* 使 .rectangle 的定位相對於這裡的 a 元素 */
+}
+
+nav a::after {
+  content: ''; /* 使用空內容 */
+  display: block;
+  position: absolute;
+  bottom: -10px; /* 距離連結底部的距離 */
+  left: 0; /* 讓矩形置中 */
+  width: 100%; /* 設置矩形寬度 */
+  height: 4px; /* 設置矩形高度 */
+  background-color: transparent; /* 默認透明 */
+}
+
+nav a:hover::after {
+  background-color: #ff0000; /* 定義 hover 時的矩形顏色 */
+}
+/* 菜單欄 */
+/* 介紹 */
+.intro {
+  display: flex;
+  flex-direction: column; /* 將內容由上往下排列 */
+  align-items: center;
+  margin: 20px auto;
+  width: 80%;
+  border-top: 2px dashed #000;
+  border-bottom: 2px dashed #000;
+}
+
+.intro p {
+  text-align: left;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 10px; /* 調整段落之間的間距 */
+}
+
+.intro h2 {
+  margin-right: 20px;
+}
+/* 介紹 */
+/* 時光走廊 */
+.slideshow-container {
+  position: relative;
+  margin: auto;
+  text-align: center;
+  width: 800px; 
+  height: 500px; 
+}
+
+.mySlides {
+  display: none;
+  width: 100%;
+}
+
+.mySlides img {
+    width: 800px;
+    height: 500px;
+    position: relative; /* 讓文字相對於圖片定位 */
+    margin-bottom: 20px; /* 調整底部間距為 20px */
+}
+
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 10px;
+    margin-top: -22px; /* 設定上邊距，使元素垂直置中 */
+    color: white; /* 文字顏色為白色 */
+    font-weight: bold; /* 字重為粗體 */
+    font-size: 30px; 
+    transition: 0.6s ease; /* 動畫過渡時間為0.6秒，以緩和變化 */
+    border-radius: 0 3px 3px 0; /* 圓角邊框設定 */
+    cursor: pointer; /* 滑鼠懸停時顯示手型游標 */
+}
+.next {
+  right: 10px;
+  border-radius: 3px 0 0 3px;
+}
+.prev {
+  left: 10px;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.caption-container {
+  text-align: center;
+}
+
+.caption-text {
+  position: absolute;
+  bottom: 0; /* 將文字定位至底部 */
+  height: 120px;
+  width: 100%;
+  background: rgba(255,204,34, 0.9);/* r、g、b、透明度 */
+  color: black;
+  text-align: center;
+  font-size: 30px; 
+  padding: 30px;
+  box-sizing: border-box; /* 防止 padding 影響寬度 */
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+}
+/* 時光走廊 */
+/* 船員與夥伴 */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px;
+}
+
+.card {
+  width: 230px;
+  padding: 10px;
+  margin: 10px;
+  border: 2px solid #BF0909;
+  text-align: center;
+}
+.title_page{
+    border-top: 2px dashed #000; /* 虛線，1px 寬度，黑色 */
+    border-bottom: 2px dashed #000; /* 虛線，1px 寬度，黑色 */
+    width: 1050px; /* 設定寬度，可以是具體寬度或百分比 */
+    margin: 20px auto; /* 設定邊距，這裡設定了上下 20px，左右自動居中 */
+}
+.title_page h2{
+    text-align: center 
+}
+/* 船員與夥伴 */
+
+/* copyright */
+footer {
+  text-align: center; /* 文字置中 */
+  padding: 10px; /* 可以根據需求調整 padding */
+  background-color: rgba(255,204,34, 0.9); /* 底部背景顏色 */
+  position: fixed; /* 固定在畫面底部 */
+  bottom: 0; /* 與底部保持固定位置 */
+  width: 100%; /* 寬度佔滿整個畫面 */
+}
