@@ -1,24 +1,18 @@
-slideIndex = 0;
-    // 初始呼叫一次，開始自動播放
-    startAutoPlay();
-    function startAutoPlay() {
-        showSlides();  // 自動切換到下一張
-    }
+function toggleMode() {
+  var element = document.body;
+  element.classList.toggle("day-mode");
+  element.classList.toggle("night-mode");
 
-    function showSlides() {
-      let slides = document.getElementsByClassName("mySlides");
-      for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-      slideIndex++;
-      if (slideIndex > slides.length) {
-        slideIndex = 1;
-      }
-      slides[slideIndex - 1].style.display = "block";
-      setTimeout(showSlides, 3000);  // Change slide every 2 seconds
-    }
-    function plusSlides(n) {
-    //   clearInterval(slideInterval);  // 清除自動播放的 interval
-      slideIndex += n;
-      showSlides();
-    }
+  var modeToggle = document.getElementById("mode-toggle");
+  var elementToAdjust = document.querySelector("nav");
+  elementToAdjust.classList.toggle("night-mode");
+
+  if (element.classList.contains("night-mode")) {
+    modeToggle.src = "/img/dark_mode_icon.png"; // 夜間模式按鈕圖片
+    modeToggle.alt = "切換到日間模式";
+  } else {
+    modeToggle.src = "/img/light_mode_icon.png"; // 日間模式按鈕圖片
+    modeToggle.alt = "切換到夜間模式";
+  }
+}
+

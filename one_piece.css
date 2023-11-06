@@ -132,6 +132,7 @@ nav a:hover::after {
 
 .caption-container {
   text-align: center;
+  width: 100%;
 }
 
 .caption-text {
@@ -184,3 +185,21 @@ footer {
   bottom: 0; /* 與底部保持固定位置 */
   width: 100%; /* 寬度佔滿整個畫面 */
 }
+
+/* 日間模式 */
+.day-mode {
+  background-color: white;
+  color: black;
+}
+
+/* 夜間模式 */
+.night-mode {
+  background-color: black;
+  color: white;
+}
+
+/* 夜間模式下特定元素的樣式 */
+.night-mode nav{
+  color: white; /* 這裡調整特定元素的文字顏色 */
+}
+

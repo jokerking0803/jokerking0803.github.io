@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>草帽海賊團 Blogger</title>
   <link rel="stylesheet" href="one_piece.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 </head>
 <body>
   <header>
@@ -15,6 +16,11 @@
     <a href="#nav">首頁</a>
     <a href="#intro">介紹</a>
     <a href="#title_page">船員與夥伴</a>
+    <a href="#" onclick="toggleMode()">
+        <img src="/img/light_mode_icon.png" id="mode-toggle" width="40" height="40" alt="切換模式">日間模式
+    </a>
+      
+    <!-- <button id="mode-toggle" onclick="toggleMode()">切換模式</button> -->
   </nav>
 
   <section id="intro" class="intro">
@@ -39,99 +45,154 @@
   <div id = "title_page" class="title_page">
     <h2>時光走廊</h2>
   </div>
-  <div class="slideshow-container">
-    <div class="mySlides">
-      <img src="/img/紅髮把草帽託付給魯夫.jpg" alt="Image 2">
-      <div class="caption-container">
-        <div class="caption-text">紅髮把草帽託付給魯夫</div>
-      </div>
+  <div id="time_corridor" class="carousel slide slideshow-container" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#time_corridor" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#time_corridor" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#time_corridor" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#time_corridor" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      <button type="button" data-bs-target="#time_corridor" data-bs-slide-to="4" aria-label="Slide 5"></button>
+      <button type="button" data-bs-target="#time_corridor" data-bs-slide-to="5" aria-label="Slide 6"></button>
+      <button type="button" data-bs-target="#time_corridor" data-bs-slide-to="6" aria-label="Slide 7"></button>
+      <button type="button" data-bs-target="#time_corridor" data-bs-slide-to="7" aria-label="Slide 8"></button>
+      <button type="button" data-bs-target="#time_corridor" data-bs-slide-to="8" aria-label="Slide 9"></button>
+      <button type="button" data-bs-target="#time_corridor" data-bs-slide-to="9" aria-label="Slide 10"></button>
+      <button type="button" data-bs-target="#time_corridor" data-bs-slide-to="10" aria-label="Slide 11"></button>
+      <button type="button" data-bs-target="#time_corridor" data-bs-slide-to="11" aria-label="Slide 12"></button>
+      <button type="button" data-bs-target="#time_corridor" data-bs-slide-to="12" aria-label="Slide 13"></button>
+      <button type="button" data-bs-target="#time_corridor" data-bs-slide-to="13" aria-label="Slide 14"></button>
+      <button type="button" data-bs-target="#time_corridor" data-bs-slide-to="14" aria-label="Slide 15"></button>
     </div>
-    <div class="mySlides">
-        <img src="/img/可愛巴其.jpg" alt="Image 1">
-        <div class="caption-container">
-          <div class="caption-text">初見小丑巴其</div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="/img/紅髮把草帽託付給魯夫.jpg" class="d-block w-100" alt="紅髮把草帽託付給魯夫">
+          <div class="carousel-caption d-none d-md-block fw-bold fs-4">
+            <div class="caption-container">
+              <div class="caption-text">紅髮把草帽託付給魯夫</div>
+            </div>
+          </div>
         </div>
-    </div>
-    <div class="mySlides">
-        <img src="/img/魯夫幫幫我.jpg" alt="Image 2">
-        <div class="caption-container">
-            <div class="caption-text">娜美　:　魯夫幫幫我</div>
+        <div class="carousel-item">
+          <img src="/img/可愛巴其.jpg" class="d-block w-100" alt="初見小丑巴其">
+          <div class="carousel-caption d-none d-md-block fw-bold fs-4">
+            <div class="caption-container">
+              <div class="caption-text">初見小丑巴其</div>
+            </div>
+          </div>
         </div>
-    </div>
-    <div class="mySlides">
-        <img src="/img/魯夫打敗惡龍懸賞3000萬貝里.png" alt="Image 2">
-        <div class="caption-container">
-            <div class="caption-text">打敗惡龍懸賞3000萬貝里</div>
+        <div class="carousel-item">
+          <img src="/img/魯夫幫幫我.jpg" class="d-block w-100" alt="娜美:魯夫幫幫我">
+          <div class="carousel-caption d-none d-md-block text-black fw-bold fs-4">
+            <div class="caption-container">
+              <div class="caption-text">娜美 : 魯夫幫幫我</div>
+            </div>
+          </div>
         </div>
-    </div>
-    <div class="mySlides">
-        <img src="/img/魯夫擊敗克洛克達爾.png" alt="Image 2">
-        <div class="caption-container">
-            <div class="caption-text">擊敗克洛克達爾</div>
+        <div class="carousel-item">
+          <img src="/img/魯夫打敗惡龍懸賞3000萬貝里.png" class="d-block w-100" alt="打敗惡龍懸賞3000萬貝里">
+          <div class="carousel-caption d-none d-md-block fw-bold fs-4">
+            <div class="caption-container">
+              <div class="caption-text">打敗惡龍懸賞3000萬貝里</div>
+            </div>
+          </div>
         </div>
-    </div>
-    <div class="mySlides">
-        <img src="/img/空島擊敗神艾尼祿.png" alt="Image 2">
-        <div class="caption-container">
-            <div class="caption-text">空島擊敗神艾尼祿</div>
+        <div class="carousel-item">
+          <img src="/img/魯夫擊敗克洛克達爾.png" class="d-block w-100" alt="擊敗克洛克達爾">
+          <div class="carousel-caption d-none d-md-block fw-bold fs-4">
+            <div class="caption-container">
+              <div class="caption-text">擊敗克洛克達爾</div>
+            </div>
+          </div>
         </div>
-    </div>
-    <div class="mySlides">
-        <img src="/img/司法島燒海軍旗.png" alt="Image 2">
-        <div class="caption-container">
-            <div class="caption-text">司法島燒海軍旗</div>
+        <div class="carousel-item">
+          <img src="/img/空島擊敗神艾尼祿.png" class="d-block w-100" alt="空島擊敗神艾尼祿">
+          <div class="carousel-caption d-none d-md-block fw-bold fs-4">
+            <div class="caption-container">
+              <div class="caption-text">空島擊敗神艾尼祿</div>
+            </div>
+          </div>
         </div>
-    </div>
-    <div class="mySlides">
-        <img src="/img/狂揍CP9路奇.png" alt="Image 2">
-        <div class="caption-container">
-            <div class="caption-text">狂揍CP9路奇</div>
+        <div class="carousel-item">
+          <img src="/img/司法島燒海軍旗.png" class="d-block w-100" alt="司法島燒海軍旗">
+          <div class="carousel-caption d-none d-md-block fw-bold fs-4">
+            <div class="caption-container">
+              <div class="caption-text">司法島燒海軍旗</div>
+            </div>
+          </div>
         </div>
-    </div>
-    <div class="mySlides">
-        <img src="/img/梅利號換桑尼號.png" alt="Image 2">
-        <div class="caption-container">
-            <div class="caption-text">桑尼號啟程</div>
+        <div class="carousel-item">
+          <img src="/img/狂揍CP9路奇.png" class="d-block w-100" alt="狂揍CP9路奇">
+          <div class="carousel-caption d-none d-md-block fw-bold fs-4">
+            <div class="caption-container">
+              <div class="caption-text">狂揍CP9路奇</div>
+            </div>
+          </div>
         </div>
-    </div>
-    <div class="mySlides">
-        <img src="/img/招募布魯克.png" alt="Image 2">
-        <div class="caption-container">
-            <div class="caption-text">招募布魯克</div>
+        <div class="carousel-item">
+          <img src="/img/梅利號換桑尼號.png" class="d-block w-100" alt="桑尼號啟程">
+          <div class="carousel-caption d-none d-md-block fw-bold fs-4">
+            <div class="caption-container">
+              <div class="caption-text">桑尼號啟程</div>
+            </div>
+          </div>
         </div>
-    </div>
-    <div class="mySlides">
-        <img src="/img/索隆扛暴君熊傷害.png" alt="Image 2">
-        <div class="caption-container">
-            <div class="caption-text">索隆扛暴君熊傷害</div>
+        <div class="carousel-item">
+          <img src="/img/招募布魯克.png" class="d-block w-100" alt="招募布魯克">
+          <div class="carousel-caption d-none d-md-block fw-bold fs-4">
+            <div class="caption-container">
+              <div class="caption-text">招募布魯克</div>
+            </div>
+          </div>
         </div>
-    </div>
-    <div class="mySlides">
-        <img src="/img/魯夫認清自己的實力.png" alt="Image 2">
-        <div class="caption-container">
-            <div class="caption-text">就算豁出性命也救不了同伴</div>
+        <div class="carousel-item">
+          <img src="/img/索隆扛暴君熊傷害.png" class="d-block w-100" alt="索隆扛暴君熊傷害">
+          <div class="carousel-caption d-none d-md-block fw-bold fs-4">
+            <div class="caption-container">
+              <div class="caption-text">索隆扛暴君熊傷害</div>
+            </div>
+          </div>
         </div>
-    </div>
-    <div class="mySlides">
-        <img src="/img/魯夫差點陣亡.png" alt="Image 2">
-        <div class="caption-container">
-            <div class="caption-text">魯夫差點陣亡推進城</div>
+        <div class="carousel-item">
+          <img src="/img/魯夫認清自己的實力.png" class="d-block w-100" alt="就算豁出性命也救不了同伴">
+          <div class="carousel-caption d-none d-md-block fw-bold fs-4">
+            <div class="caption-container">
+              <div class="caption-text">就算豁出性命也救不了同伴</div>
+            </div>
+          </div>
         </div>
-    </div>
-    <div class="mySlides">
-        <img src="/img/白鬍子殞命頂上戰爭.png" alt="Image 2">
-        <div class="caption-container">
-            <div class="caption-text">白鬍子衝擊頂上戰爭</div>
+        <div class="carousel-item">
+          <img src="/img/魯夫差點陣亡.png" class="d-block w-100" alt="魯夫差點陣亡推進城">
+          <div class="carousel-caption d-none d-md-block fw-bold fs-4">
+            <div class="caption-container">
+              <div class="caption-text">魯夫差點陣亡推進城</div>
+            </div>
+          </div>
         </div>
-    </div>
-    <div class="mySlides">
-        <img src="/img/現在草帽海賊團.jpg" alt="Image 2">
-        <div class="caption-container">
-            <div class="caption-text">現在草帽海賊團</div>
+        <div class="carousel-item">
+          <img src="/img/白鬍子殞命頂上戰爭.png" class="d-block w-100" alt="白鬍子衝擊頂上戰爭">
+          <div class="carousel-caption d-none d-md-block fw-bold fs-4">
+            <div class="caption-container">
+              <div class="caption-text">白鬍子衝擊頂上戰爭</div>
+            </div>
+          </div>
         </div>
+        <div class="carousel-item">
+          <img src="/img/現在草帽海賊團.jpg" class="d-block w-100" alt="現在草帽海賊團">
+          <div class="carousel-caption d-none d-md-block fw-bold fs-4">
+            <div class="caption-container">
+              <div class="caption-text">現在草帽海賊團</div>
+            </div>
+          </div>
+        </div>     
     </div>
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    <button class="carousel-control-prev" type="button" data-bs-target="#time_corridor" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#time_corridor" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
 
   <!-- 船員與夥伴  -->
@@ -194,5 +255,6 @@
     © 2023 草帽海賊團/尾田栄一郎／集英社・フジテレビ・東映アニメーション
   </footer>
   <script src="one_piece.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
