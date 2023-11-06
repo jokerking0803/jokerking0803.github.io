@@ -199,7 +199,7 @@ footer {
 }
 
 /* 夜間模式下特定元素的樣式 */
-.night-mode nav{
+.night-mode .nav1{
   color: white; /* 這裡調整特定元素的文字顏色 */
 }
 
